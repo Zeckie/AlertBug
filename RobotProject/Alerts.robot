@@ -8,3 +8,11 @@ QuickAlertCheck
     Open Browser    about:blank  chrome
     Handle Alert    timeout=2 seconds
     Close All Browsers
+
+DelayedCrash
+    [Documentation]    Show when something stops it waiting for the timeout (eg. browser crash or tab closed)
+    Open Browser    about:blank  chrome
+    Execute Javascript    a=window.open("about:blank"); window.setTimeout(function(){a.close()},10000);
+    Switch Window   NEW 
+    Handle Alert    timeout=120 seconds
+    Close All Browsers
