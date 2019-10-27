@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary  run_on_failure=Nothing
-
+Test Teardown    Close All Browsers
 *** Test Cases ***
 
 QuickAlertCheck
