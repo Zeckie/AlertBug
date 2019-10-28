@@ -20,6 +20,7 @@ DelayedClose
 
 AltDelayedClose
     [Documentation]    Show what happens when something stops it waiting for the timeout (eg. tab closed)
+    ...    Uses custom keyword that does not catch the exception
     Open Browser    about:blank  chrome
     Execute Javascript    a=window.open("about:blank"); window.setTimeout(function(){a.close()},10000);
     Switch Window   NEW 
@@ -33,6 +34,14 @@ HandleTheAlert
     Execute Javascript    window.setTimeout(alert,100);
     Handle Alert    timeout=2 seconds
     Close All Browsers    
+
+AltHandleTheAlert
+    [Documentation]    Handle an alert - shows what happens when an alert appears
+    Open Browser    about:blank  chrome
+    Execute Javascript    window.setTimeout(alert,100);
+    Alt Handle Alert    timeout=2 seconds
+    Close All Browsers    
+    
     
 DifferentKeyword
     [Documentation]    Show how a different keyword handles something stops it waiting for the timeout (eg. tab closed)
