@@ -3,7 +3,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from SeleniumLibrary.base.librarycomponent import LibraryComponent
 from robot.libraries.BuiltIn import BuiltIn
-
+from selenium.common.exceptions import TimeoutException, WebDriverException
+from SeleniumLibrary.utils import secs_to_timestr
 
 
 def alt_handle_alert(timeout:str=None):
