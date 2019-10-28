@@ -3,6 +3,7 @@
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/Zeckie/AppData/Local/Programs/Python/Python37/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="HandleAlert" path="AlertBug/RobotProject/HandleAlert.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
