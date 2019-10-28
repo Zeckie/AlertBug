@@ -10,6 +10,12 @@ QuickAlertCheck
     Run Keyword And Expect Error   *Alert not found*   Handle Alert    timeout=2 seconds
     Close All Browsers
 
+AltQuickAlertCheck
+    [Documentation]    Show what happens when no alert found (fails with message "Alert not found in 2 seconds.")
+    Open Browser    about:blank  chrome
+    Run Keyword And Expect Error   *Alert not found*   Alt Handle Alert    timeout=2 seconds
+    Close All Browsers
+
 DelayedClose
     [Documentation]    Show what happens when something stops it waiting for the timeout (eg. tab closed)
     Open Browser    about:blank  chrome
